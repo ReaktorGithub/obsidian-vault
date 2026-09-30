@@ -74,17 +74,17 @@ function User() {
 
 То есть:
 
-|React|Angular|
-|---|---|
-|Component|Component|
-|JSX|Template|
-|props|@Input|
-|callback|@Output|
-|hooks|lifecycle + DI + signals/RxJS|
-|Context|DI / services|
-|React Router|Angular Router|
-|fetch/axios|HttpClient|
-|Redux|Signals / RxJS / services / NgRx|
+| React        | Angular                          |
+| ------------ | -------------------------------- |
+| Component    | Component                        |
+| JSX          | Template                         |
+| props        | @Input                           |
+| callback     | @Output                          |
+| hooks        | lifecycle + DI + signals/RxJS    |
+| Context      | DI / services                    |
+| React Router | Angular Router                   |
+| fetch/axios  | HttpClient                       |
+| Redux        | Signals / RxJS / services / NgRx |
 
 ---
 
