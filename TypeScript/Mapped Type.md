@@ -100,3 +100,31 @@ type StringUser = Stringify<User>;
 - `?`, `-?`, `readonly`, `-readonly` позволяют изменять модификаторы свойств.
     
 - Применяется для создания `Partial<T>`, `Required<T>`, `Readonly<T>` и пользовательских преобразований типов.
+
+### Гомоморфный тип
+
+**Гомоморфный mapped type** в TypeScript — это mapped type, который строится на основе ключей существующего типа и сохраняет его модификаторы, например `readonly` и `?`.
+
+### Пример
+
+```
+type User = {
+    readonly id: number;
+    name?: string;
+};
+
+type Copy<T> = {
+    [K in keyof T]: T[K];
+};
+
+type UserCopy = Copy<User>;
+```
+
+Результат:
+
+```
+type UserCopy = {
+    readonly id: number;
+    name?: string;
+};
+```
